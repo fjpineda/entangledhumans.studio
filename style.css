@@ -13,3 +13,82 @@ nav a:hover { text-decoration: underline; }
 #error { color: darkred; }
 .quote { margin-bottom: 1rem; font-style: italic; }
 .quote cite { display: block; font-style: normal; }
+
+/* Blog post titles in the blog index */
+main article h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+/* Header and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+header nav a {
+    white-space: nowrap;
+}
+
+/* Shared site header */
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.site-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.site-header nav a {
+    white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .site-header nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
