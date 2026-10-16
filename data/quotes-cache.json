@@ -1,18 +1,18 @@
 [
   {
-    "text": "The best way to predict the future is to invent it.",
-    "author": "Alan Kay"
-  },
-  {
     "text": "Programs must be written for people to read, and only incidentally for machines to execute.",
     "author": "Harold Abelson and Gerald Jay Sussman"
   },
   {
-    "text": "Simplicity is prerequisite for reliability.",
-    "author": "Edsger W. Dijkstra"
+    "text": "The best way to predict the future is to invent it.",
+    "author": "Alan Kay"
   },
   {
     "text": "The purpose of computing is insight, not numbers.",
     "author": "Richard Hamming"
+  },
+  {
+    "text": "Simplicity is prerequisite for reliability.",
+    "author": "Edsger W. Dijkstra"
   }
 ]
