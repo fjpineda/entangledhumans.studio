@@ -28,3 +28,26 @@ footer {
     font-size: 0.85rem;
     color: #666;
 }
+/* Password gate */
+
+[hidden] {
+    display: none !important;
+}
+
+#login {
+    max-width: 400px;
+    margin: 15vh auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#login input,
+#login button {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#error {
+    color: darkred;
+}
+
