@@ -48,13 +48,14 @@ header nav a {
     white-space: nowrap;
 }
 
-/* Shared site header */
+/* Shared responsive header */
 
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    position: relative;
 }
 
 .site-title {
@@ -69,26 +70,117 @@ header nav a {
     text-decoration: none;
 }
 
+/* Desktop navigation */
+
 .site-header nav {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 1.5rem;
+    justify-content: flex-end;
     flex-wrap: nowrap;
+    gap: 1.5rem;
 }
 
 .site-header nav a {
+    color: inherit;
+    text-decoration: none;
     white-space: nowrap;
 }
 
-@media (max-width: 650px) {
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* Hamburger button, hidden on desktop */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    padding: 10px;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.menu-icon::before { top: -7px; }
+.menu-icon::after  { top: 7px; }
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
     .site-header {
         flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
     }
 
     .site-header nav {
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 1rem 0;
+        border-top: 1px solid #ddd;
+        margin-top: 0.5rem;
+    }
+
+    .site-header nav.is-open {
+        display: flex;
+    }
+
+    .site-header nav a {
+        display: block;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+    }
+
+    /* Hamburger becomes an X when open */
+
+    .menu-toggle[aria-expanded="true"] .menu-icon {
+        background: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-icon::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-icon,
+    .menu-icon::before,
+    .menu-icon::after {
+        transition: none;
     }
 }
 
