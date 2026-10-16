@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>EntangledHumans Studio</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <script src="/quotes.js" defer></script>
 </head>
 <body>
     <div id="login">
         <h2>Site Under Development</h2>
         <p>Please enter the password to continue.</p>
-
         <form id="login-form">
-            <input type="password" id="password"
-                   placeholder="Password" required>
+            <input type="password" id="password" placeholder="Password" required>
             <button type="submit">Enter</button>
         </form>
-        <p id="error"></p>
+        <p id="error" role="alert"></p>
     </div>
-
     <div id="site" hidden>
         <header>
             <h1>EntangledHumans Studio</h1>
+            <nav aria-label="Main navigation"><a href="/" aria-current="page">Home</a>
+<a href="/studio/">Studio</a>
+<a href="/digitech/">Digitech</a>
+<a href="/blog/">Blog</a>
+<a href="/about/">About</a></nav>
         </header>
-
         <main>
             <h2>Welcome</h2>
             <p>The site is under development as we launch the studio.</p>
         </main>
-
         <footer>
+            <div class="quote" data-daily-quote></div>
             <p>&copy; <span id="year"></span> EntangledHumans</p>
         </footer>
     </div>
 </body>
+</html>

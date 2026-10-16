@@ -1,53 +1,15 @@
-/* Basic styling */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #222;
-    background-color: #fff;
-}
-
-header, main, footer {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    border-bottom: 1px solid #ddd;
-}
-
-footer {
-    border-top: 1px solid #ddd;
-    font-size: 0.85rem;
-    color: #666;
-}
-/* Password gate */
-
-[hidden] {
-    display: none !important;
-}
-
-#login {
-    max-width: 400px;
-    margin: 15vh auto;
-    padding: 20px;
-    text-align: center;
-}
-
-#login input,
-#login button {
-    padding: 10px;
-    font-size: 1rem;
-}
-
-#error {
-    color: darkred;
-}
-
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; font: 1rem/1.6 system-ui, sans-serif; color: #222; background: #fff; }
+header, main, footer { max-width: 1000px; margin: 0 auto; padding: 20px; }
+header { border-bottom: 1px solid #ddd; }
+footer { border-top: 1px solid #ddd; color: #666; font-size: .9rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; }
+nav a { color: inherit; text-decoration: none; }
+nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+nav a:hover { text-decoration: underline; }
+#login { max-width: 400px; margin: 15vh auto; padding: 20px; text-align: center; }
+#login input, #login button { padding: 10px; font-size: 1rem; }
+#error { color: darkred; }
+.quote { margin-bottom: 1rem; font-style: italic; }
+.quote cite { display: block; font-style: normal; }
