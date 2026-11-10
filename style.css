@@ -170,7 +170,7 @@ header nav a { white-space: nowrap; }
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    filter: brightness(0.5) saturate(0.5);
+    filter: brightness(0.5) saturate(0.75);
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
 }
