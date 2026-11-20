@@ -1,11 +1,11 @@
 [
   {
-    "text": "The purpose of computing is insight, not numbers.",
-    "author": "Richard Hamming"
-  },
-  {
     "text": "Simplicity is prerequisite for reliability.",
     "author": "Edsger W. Dijkstra"
+  },
+  {
+    "text": "The purpose of computing is insight, not numbers.",
+    "author": "Richard Hamming"
   },
   {
     "text": "Programs must be written for people to read, and only incidentally for machines to execute.",
